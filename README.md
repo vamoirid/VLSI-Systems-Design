@@ -1,6 +1,8 @@
 # VLSI-Systems-Design
  This repository contains all the assignments for the Academic Courses "VLSI-Systems-Design" taught in the Fall of 2019-2020 in Aristotle University of Thessaloniki - Electrical and Computer Engineering. 
 
+The project was done with [Cadence Virtuoso](https://www.cadence.com/en_US/home/tools/custom-ic-analog-rf-design/layout-design/virtuoso-layout-suite.html) program with the student licenses that Cadence provides to our University and in collaboration with - [Stefanos Tsoukias](https://github.com/tsoukias)
+
 ### 1. Scematic Layout
 
 ---
@@ -15,7 +17,7 @@ The task consists of 10 transistors in total, 5 of which are p-MOS and the other
 * **Outp**: is the "positive" output.
 * **Outn**: is the "negative" output.
 
-![schematic](https://github.com/vamoirid/VLSI-Systems-Design/blob/master/Graphs - Results/CADs/Schematic.png)
+![schematic](https://github.com/vamoirid/VLSI-Systems-Design/blob/master/Graphs_Results/CADs/Schematic.png)
 
 ### 2. Symbol
 
@@ -23,7 +25,7 @@ The task consists of 10 transistors in total, 5 of which are p-MOS and the other
 
 The symbol of this particular IC is quite similar to the symbol of a common Comparator or of an Operational Amplifier only modified to include additional pins in our circuit.
 
-![schematic symbol](https://github.com/vamoirid/VLSI-Systems-Design/blob/master/Graphs - Results/CADs/Symbol.png)
+![schematic symbol](https://github.com/vamoirid/VLSI-Systems-Design/blob/master/Graphs_Results/CADs/Symbol.png)
 
 ### 3. Working Principle
 
@@ -40,15 +42,15 @@ So in order to be able to control our circuit and select the appropriate transis
 
 So the whole circuit looks like this:
 
-![testbench_schematic](https://github.com/vamoirid/VLSI-Systems-Design/blob/master/Graphs%20-%20Results/CADs/Testbench.png)
+![testbench_schematic](https://github.com/vamoirid/VLSI-Systems-Design/blob/master/Graphs_Results/CADs/Testbench.png)
 
 The reason why these input sources were selected is because with this specific combination of parameters we obtain 2 sine waves between the values 0-1V which are always greater than one other than the crossing-point.
 
-![plots_inputs](https://github.com/vamoirid/VLSI-Systems-Design/blob/master/Graphs - Results/plots/Inputs_white.png)
+![plots_inputs](https://github.com/vamoirid/VLSI-Systems-Design/blob/master/Graphs_Results/plots/Inputs_white.png)
 
 Whereas the plotting of all the variables together gives us:
 
-![plot_all](https://github.com/vamoirid/VLSI-Systems-Design/blob/master/Graphs - Results/plots/All_white.png)
+![plot_all](https://github.com/vamoirid/VLSI-Systems-Design/blob/master/Graphs_Results/plots/All_white.png)
 
 So having all the necessary graphics we can easily understand the operation of the circuit. When **Vinp > Vinn** is applied then **Outp = 1V** and **Outn =! CLK**, that is, the corresponding output of the larger input permanently has the value of 1V at its output while the other output gives the clock reverse pulse. So for **Vinn > Vinp** we have **Outn = 1V** and **Outp =! CLK**.
 
@@ -66,5 +68,5 @@ We also changed clock and input values from 10MHz and 1MHz to 100MHz and 10MHz r
 
 The physical design of the circuit was designed to initially look as schematic as possible in order to facilitate its design and subsequently in as few polycrystalline paths as possible to reduce line resistance. The final circuit is as follows:
 
-![physical_final](https://github.com/vamoirid/VLSI-Systems-Design/blob/master/Graphs - Results/CADs/physical_final.png)
+![physical_final](https://github.com/vamoirid/VLSI-Systems-Design/blob/master/Graphs_Results/CADs/physical_final.png)
 
